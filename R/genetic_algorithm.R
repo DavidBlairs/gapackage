@@ -1,4 +1,4 @@
-ga <- R6Class(
+ga <- R6::R6Class(
   classname = "genetic_algorithm",
   public = list(
     par = NULL,

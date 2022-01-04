@@ -1,3 +1,21 @@
+#' @title utility_fitness_brachistochrone_2d
+#'
+#' @description This function will calculate the time taken to traverse a path in 2D space. It
+#' will use a 1D vector representing the height of points along the path at discrete intervals. It will
+#' add two values, par$A_y to the start of the vector and 0 to the end of the vector before calculating the time.
+#'
+#' @param self a gapackage::ga class
+#' @param genotype a 1D vector indicating the height of the curve at discrete intervals.
+#' @param par a named list containing initial parameters passed to the gapackage::ga$new function
+#'
+#' @details There are no dependancies but there are three parameters that need to be passed to the parameter arguement of the gapackage::ga$new function. They are as follows:
+#' \enumerate{
+#'  \item **par$A_y** The numric height to be added to the beginning of the genotype vector.
+#'  \item **par$g** the gravitational constant.
+#'  \item **par$B_x** THe total numeric width of the traversal space.
+#' }
+#'
+#' @return The traversal time of the given path.
 utility_fitness_brachistochrone_2d <- function(self, genotype, par){
   # add the first and last height to the genotype
   complete_genotype <- c(par$A_y, genotype, 0);
