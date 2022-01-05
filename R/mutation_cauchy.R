@@ -1,4 +1,4 @@
-#' @title mutation_caucjy
+#' @title mutation_cauchy
 #'
 #' @description A function which will add a numeric value taken from a cauchy distribution to each
 #' value of the population.
