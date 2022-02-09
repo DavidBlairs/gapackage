@@ -1,0 +1,5 @@
+"","generation","initial_min","B_x","initial_max","A_y","geno_length","g","remove","add_proportion","mutation_size","generations","population_size","maximise","location","metric","value"
+"1",0,0,60,10,40,20,9.81,0.5,0.5,7e-07,100,1000,FALSE,0,"average_fitness",6.28439784529077
+"2",0,0,60,10,40,20,9.81,0.5,0.5,7e-07,100,1000,FALSE,0,"average_fitness",6.0901804926701
+"3",0,0,60,10,40,20,9.81,0.5,0.5,7e-07,100,1000,FALSE,0,"average_fitness",5.96621553922086
+"4",0,0,60,10,40,20,9.81,0.5,0.5,7e-07,100,1000,FALSE,0,"average_fitness",5.86346523130814

@@ -1,13 +1,16 @@
+devtools::load_all()
+# import the library
 library(gapackage)
 
+# setup an instance of the ga class object
 brach <- gapackage::ga$new(
   dim = c(10, 1000),
   parameters = list(
     initial_min     = 0,
-    B_x             = 40,
+    B_x             = 60,
     initial_max     = 10,
-    A_y             = 10,
-    geno_length     = 10,
+    A_y             = 40,
+    geno_length     = 20,
     g               = 9.81,
     remove          = 0.5,
     add_proportion  = 0.5,
@@ -17,9 +20,11 @@ brach <- gapackage::ga$new(
     maximise        = FALSE,
     location        = 0
   ),
+  store_data = FALSE,
   initial = initial_rand_uni_2d
 );
 
+# add mutation and crossover operators
 brach$add_operators(
   operators = list(
     mutation_cauchy,
@@ -27,6 +32,7 @@ brach$add_operators(
   )
 )
 
+# add dependancies for the selection operator
 brach$add_dependents(
   dependents = list(
     fitness_function_single = utility_fitness_brachistochrone_2d,
@@ -34,10 +40,12 @@ brach$add_dependents(
   )
 )
 
+# add the selection operator
 brach$add_operators(
     selection_basic_2d
 )
 
+# setup an output plot function
 brachistochrone_plot <- function(self, population, par){
   genotype_vector <- as.vector(population[,ncol(population)]);
   x_values <- 1:length(genotype_vector)
@@ -49,6 +57,7 @@ brachistochrone_plot <- function(self, population, par){
   ))
 }
 
+# add the output graph
 brach$add_output_graph(
   list(
     xlab = "horizontal distance",
@@ -57,5 +66,6 @@ brach$add_output_graph(
   )
 )
 
+# run the simulation for 200 generations
 brach$run_ui()
 

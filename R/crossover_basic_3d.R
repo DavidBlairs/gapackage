@@ -5,7 +5,6 @@
 #' The function should never be run explicitly, only passed as a parameter to the add_operator()
 #' function of the gapackage::ga class.
 #'
-#'
 #' @param self a gapackage::ga class
 #' @param population an array representing a 3D population of genotypes
 #' @param par a named list containing initial parameters passed to the gapackage::ga$new function

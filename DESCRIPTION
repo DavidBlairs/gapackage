@@ -18,9 +18,11 @@ Imports:
     bslib,
     dashboardthemes,
     dplyr,
+    plotly,
     R6,
     shiny,
     shinydashboard,
+    shinyjs,
     shinythemes,
     showtext,
     thematic

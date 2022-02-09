@@ -2,7 +2,7 @@
 % Please edit documentation in R/mutation_cauchy.R
 \name{mutation_cauchy}
 \alias{mutation_cauchy}
-\title{mutation_caucjy}
+\title{mutation_cauchy}
 \usage{
 mutation_cauchy(self, population, par)
 }
