@@ -13,5 +13,5 @@ ga_example(name)
 This function will allow you to run a number of examples
 }
 \details{
-available examples: 'euclidean'
+available examples: 'euclidean', 'manhattan', 'minkowski' and 'non-euclidean'
 }
