@@ -1,3 +1,8 @@
+#' @title example_euclidean_distance
+#'
+#' @description This function will run the euclidean distance example.
+#'
+#' @details This function is used by the ga_example.
 #' @export
 example_physics_engine <- function(){
   # setup an instance of the ga class object
