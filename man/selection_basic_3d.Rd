@@ -31,7 +31,7 @@ This algorithm will require 1 direct dependency and 1 indirect dependency. They 
 
 There are three parameters that need to be passed to the parameter arguement of the gapackage::ga$new function. They are as follows:
 \enumerate{
-\item \strong{par$add_proportion} the number of genotypes to be removed as a percentage of the total population size.
+\item \strong{par$remove_proportion} the number of genotypes to be removed as a percentage of the total population size.
 \item \strong{par$population_size} the number of genotypes in the entire population.
 \item \strong{par$maximise} a boolean indicating whether the fitness function should be maximised or minimised.
 }
