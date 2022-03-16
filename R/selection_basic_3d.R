@@ -18,14 +18,15 @@
 #'
 #' There are three parameters that need to be passed to the parameter arguement of the gapackage::ga$new function. They are as follows:
 #' \enumerate{
-#'  \item **par$add_proportion** the number of genotypes to be removed as a percentage of the total population size.
+#'  \item **par$remove_proportion** the number of genotypes to be removed as a percentage of the total population size.
 #'  \item **par$population_size** the number of genotypes in the entire population.
 #'  \item **par$maximise** a boolean indicating whether the fitness function should be maximised or minimised.
 #' }
 #'
 #' @return an array representing a population of genotypes with the same dimensions as the population parameter.
+#' @export
 selection_basic_3d <- function(self, population, par){
-  number_to_remove <- as.integer(par$remove * par$population_size);
+  number_to_remove <- as.integer(par$remove_proportion * par$population_size);
 
   fitnesses <- self$dependents$fitness_function(self, population, par);
   fitness_order <- order(fitnesses, decreasing = !par$maximise);

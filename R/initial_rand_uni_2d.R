@@ -19,6 +19,7 @@
 #' }
 #'
 #' @return an array representing a 2D population of genotypes
+#' @export
 initial_rand_uni_2d = function(self, par){
   return(
     array(

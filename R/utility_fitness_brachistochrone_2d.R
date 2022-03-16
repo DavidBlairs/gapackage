@@ -16,6 +16,7 @@
 #' }
 #'
 #' @return The traversal time of the given path.
+#' @export
 utility_fitness_brachistochrone_2d <- function(self, genotype, par){
   # add the first and last height to the genotype
   complete_genotype <- c(par$A_y, genotype, 0);

@@ -13,6 +13,7 @@
 #' }
 #'
 #' @return a 2D array representing a genotype.
+#' @export
 utility_add_start_end_3d <- function(genotype, par){
   return(
     rbind(

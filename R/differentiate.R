@@ -6,6 +6,7 @@
 #' @param curve A 2D array with 2 columns where each row is a coordinate. The array is treated as ordered.
 #'
 #' @return A vector indicating the approximate gradient for each segment of the curve.
+#' @export
 differentiate <- function(curve){
   gradients <- c();
   for (segment_index in 1:(dim(curve)[1] - 1)){

@@ -16,6 +16,7 @@
 #' }
 #'
 #' @return The traversal time of the given path.
+#' @export
 utility_fitness_brachistochrone_3d <- function(self, genotype, par){
   genotype <- utility_add_start_end_3d(genotype, par);
 

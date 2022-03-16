@@ -13,6 +13,7 @@
 #' }
 #'
 #' @return a 1D array representing a genotype.
+#' @export
 utility_add_start_end_2d <- function(genotype, par){
   return(c(par$A_y, genotype, 0))
 }

@@ -24,6 +24,7 @@
 #' }
 #'
 #' @return an array representing a population of genotypes with the same dimensions as the population parameter.
+#' @export
 selection_basic_2d <- function(self, population, par){
   number_to_remove <- as.integer(par$remove * par$population_size);
 

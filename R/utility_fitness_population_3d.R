@@ -14,10 +14,11 @@
 #' }
 #'
 #' @return The traversal time of the given path.
-# calculate fitness euclidean
+#' @export
 utility_fitness_population_3d <- function(self, population, par){
   fitnesses <- apply(population, MARGIN = 3, FUN = function(genotype){
     return(self$dependents$fitness_function_single(self, genotype, par))
   })
+  self$add_metric(name = "average_fitness", value = sum(fitnesses) / length(fitnesses));
   return(fitnesses)
 }

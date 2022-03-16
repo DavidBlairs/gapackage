@@ -16,6 +16,7 @@
 #' }
 #'
 #' @return a number representing the total distance.
+#' @export
 utility_fitness_minkowski_3d <- function(self, genotype, par){
   complete_genotype <- rbind(par$minkowski_start, genotype, par$minkowski_end);
 

@@ -17,6 +17,7 @@
 #' }
 #'
 #' @return an array representing a 2D population of genotypes
+#' @export
 crossover_basic_3d <- function(self, population, par){
   # Get the people chosen for crossover
   number_of_offspring <- as.integer(par$add_proportion * par$population_size);

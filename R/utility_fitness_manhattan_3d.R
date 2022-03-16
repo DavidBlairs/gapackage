@@ -15,6 +15,7 @@
 #' }
 #'
 #' @return a number representing the total distance.
+#' @export
 utility_fitness_manhattan_3d <- function(self, genotype, par){
   complete_genotype <- rbind(par$manhattan_start, genotype, par$manhattan_end);
 

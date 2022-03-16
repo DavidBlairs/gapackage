@@ -16,6 +16,7 @@
 #' }
 #'
 #' @return a number representing the total distance.
+#' @export
 uility_fitness_non_euclidean_3d <- function(self, genotype, par){
   complete_genotype <- rbind(par$non_euclidean_start, genotype, par$non_euclidean_end);
 

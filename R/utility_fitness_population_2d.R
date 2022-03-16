@@ -14,6 +14,7 @@
 #' }
 #'
 #' @return The traversal time of the given path.
+#' @export
 utility_fitness_population_2d <- function(self, population, par){
   fitnesses <- apply(population, MARGIN = 2, FUN = function(genotype){
     return(self$dependents$fitness_function_single(self, genotype, par))

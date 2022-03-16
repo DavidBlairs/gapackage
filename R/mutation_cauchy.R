@@ -18,6 +18,7 @@
 #' }
 #'
 #' @return an array representing a population of genotypes with the same dimensions as the population parameter.
+#' @export
 mutation_cauchy <- function(self, population, par){
   change <- array(
     rcauchy(prod(dim(population)), location = par$location, scale = par$mutation_size),

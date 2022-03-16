@@ -15,6 +15,7 @@
 #' }
 #'
 #' @return a number representing the total distance.
+#' @export
 utility_fitness_euclidean_3d <- function(self, genotype, par){
   complete_genotype <- rbind(par$euclidean_start, genotype, par$euclidean_end);
 
