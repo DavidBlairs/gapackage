@@ -2,12 +2,12 @@
 % Please edit documentation in R/example_physics_engine.R
 \name{example_physics_engine}
 \alias{example_physics_engine}
-\title{example_euclidean_distance}
+\title{example_physics_engine}
 \usage{
 example_physics_engine()
 }
 \description{
-This function will run the euclidean distance example.
+This function will run the physics engine example.
 }
 \details{
 This function is used by the ga_example.

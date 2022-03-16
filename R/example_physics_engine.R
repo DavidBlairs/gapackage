@@ -1,6 +1,6 @@
-#' @title example_euclidean_distance
+#' @title example_physics_engine
 #'
-#' @description This function will run the euclidean distance example.
+#' @description This function will run the physics engine example.
 #'
 #' @details This function is used by the ga_example.
 #' @export
