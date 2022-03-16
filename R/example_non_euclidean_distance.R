@@ -1,38 +1,42 @@
-#' @title example_euclidean_distance
+#' @title example_non_euclidean_distance
 #'
-#' @description This function will run the euclidean distance example.
+#' @description This function will run the non-euclidean distance example.
 #'
 #' @details This function is used by the ga_example.
 #' @export
-example_euclidean_distance <- function(){
+example_non_euclidean_distance <- function(){
   # setup the settings questions
   allowed_settings <- list(
     list(
       name     = "generations",
       question = "How many generations should there be?",
       default  = 200
-     )
+    )
   )
 
   # get the user settings
-  settings <- get_settings(settings = allowed_settings, label = "Minimising the Euclidean Distance")
+  settings <- get_settings(settings = allowed_settings, label = "Minimising the Non-Euclidean Distance")
+
+  cat(noquote("\nThis example will use the identity matrix as A.\n"))
 
   # setup an instance of the ga class object
   brach <- ga$new(
     dim = c(10, 1000),
     parameters = list(
-      initial_min       = 0,
-      initial_max       = 10,
-      euclidean_start   = c(0, 0),
-      euclidean_end     = c(10, 10),
-      geno_length       = 4,
-      remove_proportion = 0.5,
-      add_proportion    = 0.5,
-      mutation_size     = 0.0000007,
-      generations       = as.numeric(settings$generations),
-      population_size   = 1000,
-      maximise          = FALSE,
-      location          = 0
+      initial_min          = 0,
+      initial_max          = 10,
+      non_euclidean_start  = c(0, 0),
+      non_euclidean_end    = c(10, 10),
+      non_euclidean_A      = array(c(1, 0, 0, 1), dim = c(2, 2)),
+      non_euclidean_bounds = c(0, 1),
+      geno_length          = 4,
+      remove_proportion    = 0.5,
+      add_proportion       = 0.5,
+      mutation_size        = 0.0000007,
+      generations          = as.numeric(settings$generations),
+      population_size      = 1000,
+      maximise             = FALSE,
+      location             = 0
     ),
     store_data = FALSE,
     initial = initial_rand_uni_3d
@@ -49,7 +53,7 @@ example_euclidean_distance <- function(){
   # add dependancies for the selection operator
   brach$add_dependents(
     dependents = list(
-      fitness_function_single = utility_fitness_euclidean_3d,
+      fitness_function_single = utility_fitness_non_euclidean_3d,
       fitness_function = utility_fitness_population_3d
     )
   )
@@ -74,6 +78,6 @@ example_euclidean_distance <- function(){
   # plot the fitest member
   fitest_member <- brach$population[,,dim(brach$population)[3]];
 
-  fitest_member <- rbind(brach$par$euclidean_start, fitest_member, brach$par$euclidean_end)
-  plot(fitest_member[,1], fitest_member[,2], type = "l", ylab = "Y", xlab = "X", main = "Euclidean Distance")
+  fitest_member <- rbind(brach$par$non_euclidean_start, fitest_member, brach$par$non_euclidean_end)
+  plot(fitest_member[,1], fitest_member[,2], type = "l", ylab = "Y", xlab = "X", main = "Non-Euclidean Distance")
 }

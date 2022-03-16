@@ -1,21 +1,21 @@
-#' @title example_euclidean_distance
+#' @title example_manhattan_distance
 #'
-#' @description This function will run the euclidean distance example.
+#' @description This function will run the manhattan distance example.
 #'
 #' @details This function is used by the ga_example.
 #' @export
-example_euclidean_distance <- function(){
+example_manhattan_distance <- function(){
   # setup the settings questions
   allowed_settings <- list(
     list(
       name     = "generations",
       question = "How many generations should there be?",
       default  = 200
-     )
+    )
   )
 
   # get the user settings
-  settings <- get_settings(settings = allowed_settings, label = "Minimising the Euclidean Distance")
+  settings <- get_settings(settings = allowed_settings, label = "Minimising the Manhattan Distance")
 
   # setup an instance of the ga class object
   brach <- ga$new(
@@ -23,8 +23,8 @@ example_euclidean_distance <- function(){
     parameters = list(
       initial_min       = 0,
       initial_max       = 10,
-      euclidean_start   = c(0, 0),
-      euclidean_end     = c(10, 10),
+      manhattan_start   = c(0, 0),
+      manhattan_end     = c(10, 10),
       geno_length       = 4,
       remove_proportion = 0.5,
       add_proportion    = 0.5,
@@ -49,7 +49,7 @@ example_euclidean_distance <- function(){
   # add dependancies for the selection operator
   brach$add_dependents(
     dependents = list(
-      fitness_function_single = utility_fitness_euclidean_3d,
+      fitness_function_single = utility_fitness_manhattan_3d,
       fitness_function = utility_fitness_population_3d
     )
   )
@@ -74,6 +74,6 @@ example_euclidean_distance <- function(){
   # plot the fitest member
   fitest_member <- brach$population[,,dim(brach$population)[3]];
 
-  fitest_member <- rbind(brach$par$euclidean_start, fitest_member, brach$par$euclidean_end)
-  plot(fitest_member[,1], fitest_member[,2], type = "l", ylab = "Y", xlab = "X", main = "Euclidean Distance")
+  fitest_member <- rbind(brach$par$manhattan_start, fitest_member, brach$par$manhattan_end)
+  plot(fitest_member[,1], fitest_member[,2], type = "l", ylab = "Y", xlab = "X", main = "Manhattan Distance")
 }
