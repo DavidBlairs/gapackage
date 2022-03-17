@@ -29,4 +29,9 @@ ga_example <- function(name){
   if (name == "non-euclidean"){
     example_non_euclidean_distance()
   }
+
+  # if the physics simulation is chosen
+  if (name == "matter"){
+    example_physics_engine()
+  }
 }
