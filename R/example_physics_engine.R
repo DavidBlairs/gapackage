@@ -164,10 +164,14 @@ example_physics_engine <- function(){
     session$sendCustomMessage("set_speed", shiny:::toJSON(c(speed)))
   }
 
+  decomp_loc <- system.file("decomp.js", package = "gapackage")
+  matter_loc <- system.file("matter.js", package = "gapackage")
+  matter_example_loc <- system.file("matter_example.js", package = "gapackage")
+
   ui <- shiny::fluidPage(
-    shiny::tags$head(shiny::HTML("<script src='decomp.js' type='text/javascript'></script>")),
-    shiny::tags$head(shiny::HTML("<script src='matter.js' type='text/javascript'></script>")),
-    shiny::tags$head(shiny::HTML("<script src='matter_example.js' type='text/javascript'></script>")),
+    shiny::tags$head(shiny::HTML(paste0("<script src='", decomp_loc, "' type='text/javascript'></script>"))),
+    shiny::tags$head(shiny::HTML(paste0("<script src='", matter_loc, "' type='text/javascript'></script>"))),
+    shiny::tags$head(shiny::HTML(paste0("<script src='", matter_example_loc,"' type='text/javascript'></script>"))),
     shiny::HTML("<canvas id = 'matterjs-canvas'></canvas>")
   )
 
