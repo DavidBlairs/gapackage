@@ -4,7 +4,7 @@
 \alias{differentiate}
 \title{differentiate}
 \usage{
-differentiate(curve)
+differentiate(curve, time_interval)
 }
 \arguments{
 \item{curve}{A 2D array with 2 columns where each row is a coordinate. The array is treated as ordered.}

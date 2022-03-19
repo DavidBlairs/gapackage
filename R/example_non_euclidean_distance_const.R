@@ -1,10 +1,10 @@
-#' @title example_non_euclidean_distance
+#' @title example_non_euclidean_distance_constS
 #'
-#' @description This function will run the non-euclidean distance example.
+#' @description This function will run the non-euclidean distance example with a constant identity matrix of A.
 #'
 #' @details This function is used by the ga_example.
 #' @export
-example_non_euclidean_distance <- function(){
+example_non_euclidean_distance_const <- function(){
   # setup the settings questions
   allowed_settings <- list(
     list(
@@ -15,7 +15,7 @@ example_non_euclidean_distance <- function(){
   )
 
   # get the user settings
-  settings <- get_settings(settings = allowed_settings, label = "Minimising the Non-Euclidean Distance")
+  settings <- get_settings(settings = allowed_settings, label = "Minimising the Non-Euclidean Distance (Const)")
 
   cat(noquote("\nThis example will use the identity matrix as A.\n"))
 
@@ -29,10 +29,10 @@ example_non_euclidean_distance <- function(){
       non_euclidean_end    = c(10, 10),
       non_euclidean_A      = array(c(1, 0, 0, 1), dim = c(2, 2)),
       non_euclidean_bounds = c(0, 1),
-      geno_length          = 4,
+      geno_length          = 3,
       remove_proportion    = 0.5,
       add_proportion       = 0.5,
-      mutation_size        = 0.0000007,
+      mutation_size        = 0.0000000007,
       generations          = as.numeric(settings$generations),
       population_size      = 1000,
       maximise             = FALSE,
@@ -81,3 +81,4 @@ example_non_euclidean_distance <- function(){
   fitest_member <- rbind(brach$par$non_euclidean_start, fitest_member, brach$par$non_euclidean_end)
   plot(fitest_member[,1], fitest_member[,2], type = "l", ylab = "Y", xlab = "X", main = "Non-Euclidean Distance")
 }
+

@@ -26,12 +26,20 @@ ga_example <- function(name){
   }
 
   # if the non-euclidean simulation is chosen
-  if (name == "non-euclidean"){
-    example_non_euclidean_distance()
+  if (name == "non-euclidean-var"){
+    example_non_euclidean_distance_var()
   }
+
+  # if the non-euclidean simulation const is chosen
+  if (name == "non-euclidean-const")
 
   # if the physics simulation is chosen
   if (name == "matter"){
     example_physics_engine()
+  }
+
+  # if the brachistochrone problem is chosen
+  if (name == "brachistochrone"){
+    example_brachistochrone()
   }
 }

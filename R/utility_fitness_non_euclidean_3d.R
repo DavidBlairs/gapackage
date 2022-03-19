@@ -27,16 +27,15 @@ utility_fitness_non_euclidean_3d <- function(self, genotype, par){
   bounds <- par$non_euclidean_bounds;
   curve <- complete_genotype;
 
-  differential <- differentiate(genotype);
-
   time_interval <- (bounds[2] - bounds[1]) / (dim(curve)[1] - 1);
-  time_stamps   <- ((1:dim(curve)[1]) - 1) * time_interval;
+  differential <- differentiate(curve, time_interval);
 
-  differential <- array(append(time_stamps, differential), dim = dim(curve));
+
+  time_stamps   <- ((1:dim(curve)[1]) - 1) * time_interval;
 
   total_area <- 0;
   for (time_index in 1:(dim(curve)[1] - 1)){
-    current_gradient <- differential[time_index, ];
+    current_gradient <- as.vector(differential[time_index, ]);
     A_component <- current_gradient %*% par$non_euclidean_A;
     magnitude   <- sqrt(sum(A_component * current_gradient));
 
