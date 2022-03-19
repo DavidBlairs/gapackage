@@ -27,7 +27,7 @@ example_physics_engine <- function(){
     initial = initial_rand_uni_2d
   );
 
-  downloads_dir <- "C:/Users/david.blair/Downloads/";
+  downloads_dir <- paste0(Sys.getenv('USERPROFILE'), "\\Downloads\\");
 
   # add mutation and crossover operators
   brach$add_operators(
