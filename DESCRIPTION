@@ -13,5 +13,7 @@ RoxygenNote: 7.1.2
 Imports: 
     abind,
     dplyr,
-    magrittr
+    magrittr,
+    shinydashboard,
+    shinythemes
 Depends: R (>= 3.0.0)
