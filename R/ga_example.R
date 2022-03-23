@@ -31,7 +31,9 @@ ga_example <- function(name){
   }
 
   # if the non-euclidean simulation const is chosen
-  if (name == "non-euclidean-const")
+  if (name == "non-euclidean-const"){
+    example_non_euclidean_distance_const()
+  }
 
   # if the physics simulation is chosen
   if (name == "matter"){
