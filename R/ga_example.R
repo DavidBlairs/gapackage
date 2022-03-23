@@ -4,7 +4,7 @@
 #'
 #' @param name the name of the example
 #'
-#' @details available examples: 'euclidean', 'manhattan', 'minkowski' and 'non-euclidean'
+#' @details available examples: 'euclidean', 'manhattan', 'minkowski', 'non-euclidean-var', 'non-euclidean-const, 'matter', 'brachistochrone' and 'ui'.
 #'
 #' @export
 ga_example <- function(name){
