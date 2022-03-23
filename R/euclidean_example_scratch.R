@@ -1,3 +1,6 @@
+# I've wrapped this code in a function to avoid it being accessible from the gapackage. I've only included it here
+# to make it easier for you to access. To run it, take the code out of the function and place it in a seperate file.
+# Then, click source as you usually would.
 euclidean_example_scratch <- function(){
   library(dplyr)
   library(abind)
@@ -168,3 +171,4 @@ euclidean_example_scratch <- function(){
   print(paste0("Inital Best Fitness: ", initial_fitness))
   print(paste0("Final Best Fitness : ", fitest_fitness))
 }
+
