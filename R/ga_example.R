@@ -44,4 +44,9 @@ ga_example <- function(name){
   if (name == "brachistochrone"){
     example_brachistochrone()
   }
+
+  # if they want to test the UI
+  if (name == "ui"){
+    example_brachistochrone_ui()
+  }
 }
