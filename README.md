@@ -1,4 +1,12 @@
-## GA-Package
+# Final Year Project
+This is the R package I created as part of the final year project. This was a requirement in the bachelor degree at Brunel University London. The project was written in $LaTeX$ and all the code was written in R. The write up can be found in `Final_Year_Project.pdf` along with all the package documentation [here](https://davidblairs.github.io/). The abstract:
+
+><em>In this paper, we will discuss a number of different applications of genetic algorithms as well as their theoretical and historical background. We have built a package for the programming language R which makes the construction and subsequent parameter optimisation easier and quicker to accomplish. While this package is ideal in terms of its design, it is not without its limitations, most notably its long execution time compared to low-level implementations. With this package, a variety of examples are explored. We have looked at how one may minimise distances between two points in Euclidean and Non-Euclidean space. For the Non-Euclidean case, we have used a matrix function to represent the relative transformation to the space at any point. As well as this, we have provided a way of deriving this matrix from a multivariant function which represents the relative transformation.  We then looked at a number of alternative ways to measure distance such as the Manhattan and Minkowski metrics to further test the usability of the package. Lastly, we explored how someone may integrate a physics simulation as an alternative way of calculating the fitness score for each genotype. This is very much a ``proof of concept” but does demonstrate our initial intent and provides a starting point for further research into this area. </em>
+
+The R code has the capability to view a graph of the fitness function over time and modify parameters live during the genetic algorithms execution using the R Shiny package. We also expored how you can use a physics engine, **matter.js**, embedded inside of an R Shiny window in order to act as a simulated fitness function for solving the brachistochrone problem. You can find all this information in `Final_Year_Project.pdf` along with all the package documentation [here](https://davidblairs.github.io/) 
+
+---
+## GA-Package (Old README)
 
 ![enter image description here](https://raw.githubusercontent.com/DavidBlairs/gapackage_submit/main/docs/ga_package_logo.png)
 
